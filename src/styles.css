@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-square-hover-state {
+  background-color: #c8a2c8;
+}
+
+#create-grid-button {
+  display: block;
+  margin: 36px auto;
+  font-size: 22px;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 22px;
+  background-color: rgb(101, 123, 144);
+  color: #fff;
+}
+
+#create-grid-button:hover {
+  background-color: rgba(64, 78, 91, 1);
+}
