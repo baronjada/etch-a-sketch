@@ -1,6 +1,41 @@
 const createGridButton = document.querySelector("#create-grid-button");
-
 createGridButton.addEventListener("click", createGrid);
+
+const clearGridButton = document.querySelector("#clear-grid-button");
+
+const hexCharacters = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+];
+
+function getHexChar(index) {
+  return hexCharacters[index];
+}
+
+function generateNewColour() {
+  let hexColorRep = "#";
+
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * hexCharacters.length);
+    hexColorRep += getHexChar(randomIndex);
+  }
+
+  return hexColorRep;
+}
 
 function createGrid() {
   const container = document.querySelector(".container");
@@ -36,9 +71,13 @@ function createGrid() {
     gridSquare.style.border = "1px solid black";
 
     gridSquare.addEventListener("mouseover", (event) => {
-      gridSquare.classList.toggle("grid-square-hover-state");
+      gridSquare.style.backgroundColor = generateNewColour();
     });
 
     container.append(gridSquare);
+
+    clearGridButton.addEventListener("click", (event) => {
+      gridSquare.style.backgroundColor = "";
+    });
   }
 }

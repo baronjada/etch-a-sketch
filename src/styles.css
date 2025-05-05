@@ -4,21 +4,35 @@
   padding: 0;
 }
 
-.grid-square-hover-state {
-  background-color: #c8a2c8;
-}
-
-#create-grid-button {
+#create-grid-button,
+#clear-grid-button {
   display: block;
-  margin: 36px auto;
-  font-size: 22px;
+  font-size: 18px;
   padding: 12px 36px;
   border: none;
   border-radius: 22px;
-  background-color: rgb(101, 123, 144);
   color: #fff;
 }
 
+#create-grid-button {
+  background-color: rgb(217, 14, 170);
+}
+
 #create-grid-button:hover {
-  background-color: rgba(64, 78, 91, 1);
+  background-color: rgb(27, 44, 60);
+}
+
+#clear-grid-button {
+  background-color: rgb(27, 44, 60);
+}
+
+#clear-grid-button:hover {
+  background-color: rgb(217, 14, 170);
+}
+
+.grid-action-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto;
+  column-gap: 24px;
 }
